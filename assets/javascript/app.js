@@ -20,98 +20,98 @@ var questionsArray = [
     question: "Who was the Roman god of fire?",
     correct_answer: "Vulcan",
     incorrect_answers: ["Apollo", "Jupiter", "Mercury"]
+  },
+  {
+    id: 2,
+    type: "multiple",
+    difficulty: "medium",
+    question: "Neptune's greek name was...",
+    correct_answer: "Poseidon",
+    incorrect_answers: ["Ares", "Zeus", "Apollo"]
+  },
+  {
+    id: 3,
+    type: "multiple",
+    difficulty: "medium",
+    question:
+      "Which of the following Mesopotamian mythological figures was NOT a deity?",
+    correct_answer: "Enkidu",
+    incorrect_answers: ["Enki", "Enlil", "Enkimdu"]
+  },
+  {
+    id: 4,
+    type: "multiple",
+    difficulty: "medium",
+    question:
+      "Which of these Roman gods doesn't have a counterpart in Greek mythology?",
+    correct_answer: "Janus",
+    incorrect_answers: ["Vulcan", "Juno", "Mars"]
+  },
+  {
+    id: 5,
+    type: "multiple",
+    difficulty: "medium",
+    question: "In Greek Mythology, who killed Achilles?",
+    correct_answer: "Paris",
+    incorrect_answers: ["Hector", "Helen", "Pericles"]
+  },
+  {
+    id: 6,
+    type: "multiple",
+    difficulty: "medium",
+    question: "A minotaur is half human half what?",
+    correct_answer: "Bull",
+    incorrect_answers: ["Cow", "Horse", "Eagle"]
+  },
+  {
+    id: 7,
+    type: "multiple",
+    difficulty: "medium",
+    question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+    correct_answer: "Set",
+    incorrect_answers: ["Horus", "Ra", "Anhur"]
+  },
+  {
+    id: 8,
+    type: "multiple",
+    difficulty: "medium",
+    question: "Which of the following is not one of the Greek Fates?",
+    correct_answer: "Narcissus",
+    incorrect_answers: ["Clotho", "Atropos", "Lachesis"]
+  },
+  {
+    id: 9,
+    type: "multiple",
+    difficulty: "medium",
+    question:
+      "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
+    correct_answer: "Spider",
+    incorrect_answers: ["Wild dog", "Monkey", "Crocodile"]
+  },
+  {
+    id: 10,
+    type: "boolean",
+    difficulty: "medium",
+    question: "Perseus defeated the Minotaur with his bare hands.",
+    correct_answer: "False",
+    incorrect_answers: ["True"]
+  },
+  {
+    id: 11,
+    type: "boolean",
+    difficulty: "medium",
+    question: "Cronus was the oldest of the Titans.",
+    correct_answer: "False",
+    incorrect_answers: ["True"]
+  },
+  {
+    id: 12,
+    type: "boolean",
+    difficulty: "Medium",
+    question: "Eros (Cupid) is the son of Aphrodite.",
+    correct_answer: "True",
+    incorrect_answers: ["False"]
   }
-  // {
-  //   id: 2,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question: "Neptune's greek name was...",
-  //   correct_answer: "Poseidon",
-  //   incorrect_answers: ["Ares", "Zeus", "Apollo"]
-  // },
-  // {
-  //   id: 3,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question:
-  //     "Which of the following Mesopotamian mythological figures was NOT a deity?",
-  //   correct_answer: "Enkidu",
-  //   incorrect_answers: ["Enki", "Enlil", "Enkimdu"]
-  // },
-  // {
-  //   id: 4,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question:
-  //     "Which of these Roman gods doesn't have a counterpart in Greek mythology?",
-  //   correct_answer: "Janus",
-  //   incorrect_answers: ["Vulcan", "Juno", "Mars"]
-  // },
-  // {
-  //   id: 5,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question: "In Greek Mythology, who killed Achilles?",
-  //   correct_answer: "Paris",
-  //   incorrect_answers: ["Hector", "Helen", "Pericles"]
-  // },
-  // {
-  //   id: 6,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question: "A minotaur is half human half what?",
-  //   correct_answer: "Bull",
-  //   incorrect_answers: ["Cow", "Horse", "Eagle"]
-  // },
-  // {
-  //   id: 7,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
-  //   correct_answer: "Set",
-  //   incorrect_answers: ["Horus", "Ra", "Anhur"]
-  // },
-  // {
-  //   id: 8,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question: "Which of the following is not one of the Greek Fates?",
-  //   correct_answer: "Narcissus",
-  //   incorrect_answers: ["Clotho", "Atropos", "Lachesis"]
-  // },
-  // {
-  //   id: 9,
-  //   type: "multiple",
-  //   difficulty: "medium",
-  //   question:
-  //     "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
-  //   correct_answer: "Spider",
-  //   incorrect_answers: ["Wild dog", "Monkey", "Crocodile"]
-  // },
-  // {
-  //   id: 10,
-  //   type: "boolean",
-  //   difficulty: "medium",
-  //   question: "Perseus defeated the Minotaur with his bare hands.",
-  //   correct_answer: "False",
-  //   incorrect_answers: ["True"]
-  // },
-  // {
-  //   id: 11,
-  //   type: "boolean",
-  //   difficulty: "medium",
-  //   question: "Cronus was the oldest of the Titans.",
-  //   correct_answer: "False",
-  //   incorrect_answers: ["True"]
-  // },
-  // {
-  //   id: 12,
-  //   type: "boolean",
-  //   difficulty: "Medium",
-  //   question: "Eros (Cupid) is the son of Aphrodite.",
-  //   correct_answer: "True",
-  //   incorrect_answers: ["False"]
-  // }
 ];
 console.log(questionsArray);
 
