@@ -128,6 +128,8 @@ var correct = 0;
 var incorrect = 0;
 var correctAnswerHeading = "Congrats you picked the right answer";
 var wrongAnswerHeading = "Sorry you picked the wrong answer";
+var timesUpHeading = "Time's Up!";
+var timesUpText = "Sorry you ran out of time!";
 
 function resetTimer() {
   time = 30;
@@ -155,6 +157,10 @@ function counter() {
   $("#timer").text(time);
   if (time === 0) {
     stop();
+    console.log("time ran out!");
+    questionResult(timesUpHeading, timesUpText);
+    setTimeout(closeModal, 2500);
+    incorrect++;
   }
 }
 
@@ -172,9 +178,9 @@ function getQuestion() {
     questionChoices = [];
   }
   displayQuestion = questionsArray[questionIndex].question;
-  console.log("questoin text:", displayQuestion);
+  console.log("current question:", displayQuestion);
   askedQuestions.push(questionIndex);
-  console.log(askedQuestions);
+  console.log("Index of asked questions:",askedQuestions);
 
   // print the question on the screen
   var newHeading = $("<h1>");
@@ -190,7 +196,7 @@ function getQuestion() {
     questionChoices.push(incorrect_answers);
   });
   questionChoices.push(questionsArray[questionIndex].correct_answer);
-  console.log(questionChoices);
+  console.log("Array of choices:", questionChoices);
 
   //print the answers on the screen
   questionChoices.forEach(function(choice, index) {
@@ -237,17 +243,16 @@ $(document).ready(function() {
 
   $("#start-game").on("click", function() {
     getQuestion();
-    $("#time-label").attr("style","inline-block")
+    $("#time-label").attr("style", "inline-block");
     startTimer();
     $("#start-game").hide();
     $("#next-question").show();
-
   });
 
   $("#next-question").on("click", function() {
-    getQuestion();
     $(".question").empty();
     $(".answer").empty();
+    getQuestion();
     resetTimer();
   });
 
@@ -273,6 +278,5 @@ $(document).ready(function() {
       setTimeout(closeModal, 2500);
     }
   });
-
-  // }
 });
+
