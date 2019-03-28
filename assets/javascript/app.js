@@ -128,10 +128,10 @@ var displayQuestion = "";
 var firstRun = false;
 var correct = 0;
 var incorrect = 0;
-var correctAnswerHeading = "Congrats you picked the right answer";
-var wrongAnswerHeading = "Sorry you picked the wrong answer";
+var correctAnswerHeading = "Congrats! you picked the right answer.";
+var wrongAnswerHeading = "Sorry, you picked the wrong answer.";
 var timesUpHeading = "Time's Up!";
-var timesUpText = "Sorry you ran out of time!";
+var timesUpText = "Sorry, you ran out of time!";
 
 function resetTimer() {
   time = 30;
@@ -196,13 +196,6 @@ function questionLogic() {
 }
 
 function getQuestion() {
-  // if (firstRun === false) {
-  //   firstRun = true;
-  // } else {
-  //   questionIndex++;
-  //   questionChoices = [];
-  // }
-
   displayQuestion = questionsArray[questionIndex].question;
   console.log("current question:", displayQuestion);
   askedQuestions.push(questionIndex);
@@ -253,7 +246,7 @@ function questionResult(heading, statusText) {
     backdrop: "static"
   });
   $(".modal-title").text(heading);
-  $("#text").text(statusText);
+  $("#text").text("The anwser is: " + statusText);
 }
 
 function closeModal() {
@@ -269,10 +262,7 @@ function closeModal() {
       style: "display:none"
     });
   }
-  
 }
-
-
 
 $(document).ready(function() {
   console.log("ready!");
@@ -306,7 +296,7 @@ $(document).ready(function() {
       setTimeout(closeModal, 2500);
     } else {
       console.log("wrong choice");
-      questionResult(wrongAnswerHeading, choiceValue);
+      questionResult(wrongAnswerHeading, questionsArray[questionIndex].correct_answer);
       stop();
       incorrect++;
       console.log("# of incorrect guesses", incorrect);
@@ -323,7 +313,6 @@ $(document).ready(function() {
     firstRun = false;
     correct = 0;
     incorrect = 0;
-    
     questionLogic();
     $(".timer").attr({
       style: "display:block"
@@ -332,4 +321,3 @@ $(document).ready(function() {
     $("#reset-game").hide();
   });
 });
-
