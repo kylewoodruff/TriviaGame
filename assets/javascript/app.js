@@ -1,7 +1,7 @@
 // question array to pick questions from to display in html
 var questionsArray = [
   {
-    id: 1,
+    id: 0,
     type: "multiple",
     difficulty: "medium",
     question:
@@ -14,105 +14,107 @@ var questionsArray = [
     ]
   },
   {
-    id: 2,
+    id: 1,
     type: "multiple",
     difficulty: "medium",
     question: "Who was the Roman god of fire?",
     correct_answer: "Vulcan",
     incorrect_answers: ["Apollo", "Jupiter", "Mercury"]
-  },
-  {
-    id: 3,
-    type: "multiple",
-    difficulty: "medium",
-    question: "Neptune's greek name was...",
-    correct_answer: "Poseidon",
-    incorrect_answers: ["Ares", "Zeus", "Apollo"]
-  },
-  {
-    id: 4,
-    type: "multiple",
-    difficulty: "medium",
-    question:
-      "Which of the following Mesopotamian mythological figures was NOT a deity?",
-    correct_answer: "Enkidu",
-    incorrect_answers: ["Enki", "Enlil", "Enkimdu"]
-  },
-  {
-    id: 5,
-    type: "multiple",
-    difficulty: "medium",
-    question:
-      "Which of these Roman gods doesn't have a counterpart in Greek mythology?",
-    correct_answer: "Janus",
-    incorrect_answers: ["Vulcan", "Juno", "Mars"]
-  },
-  {
-    id: 6,
-    type: "multiple",
-    difficulty: "medium",
-    question: "In Greek Mythology, who killed Achilles?",
-    correct_answer: "Paris",
-    incorrect_answers: ["Hector", "Helen", "Pericles"]
-  },
-  {
-    id: 7,
-    type: "multiple",
-    difficulty: "medium",
-    question: "A minotaur is half human half what?",
-    correct_answer: "Bull",
-    incorrect_answers: ["Cow", "Horse", "Eagle"]
-  },
-  {
-    id: 8,
-    type: "multiple",
-    difficulty: "medium",
-    question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
-    correct_answer: "Set",
-    incorrect_answers: ["Horus", "Ra", "Anhur"]
-  },
-  {
-    id: 9,
-    type: "multiple",
-    difficulty: "medium",
-    question: "Which of the following is not one of the Greek Fates?",
-    correct_answer: "Narcissus",
-    incorrect_answers: ["Clotho", "Atropos", "Lachesis"]
-  },
-  {
-    id: 10,
-    type: "multiple",
-    difficulty: "medium",
-    question:
-      "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
-    correct_answer: "Spider",
-    incorrect_answers: ["Wild dog", "Monkey", "Crocodile"]
-  },
-  {
-    id: 11,
-    type: "boolean",
-    difficulty: "medium",
-    question: "Perseus defeated the Minotaur with his bare hands.",
-    correct_answer: "False",
-    incorrect_answers: ["True"]
-  },
-  {
-    id: 12,
-    type: "boolean",
-    difficulty: "medium",
-    question: "Cronus was the oldest of the Titans.",
-    correct_answer: "False",
-    incorrect_answers: ["True"]
-  },
-  {
-    id: 13,
-    type: "boolean",
-    difficulty: "Medium",
-    question: "Eros (Cupid) is the son of Aphrodite.",
-    correct_answer: "True",
-    incorrect_answers: ["False"]
   }
+  // {
+  //   id: 2,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question: "Neptune's greek name was...",
+  //   correct_answer: "Poseidon",
+  //   incorrect_answers: ["Ares", "Zeus", "Apollo"]
+  // },
+  // {
+  //   id: 3,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question:
+  //     "Which of the following Mesopotamian mythological figures was NOT a deity?",
+  //   correct_answer: "Enkidu",
+  //   incorrect_answers: ["Enki", "Enlil", "Enkimdu"]
+  // },
+  // {
+  //   id: 4,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question:
+  //     "Which of these Roman gods doesn't have a counterpart in Greek mythology?",
+  //   correct_answer: "Janus",
+  //   incorrect_answers: ["Vulcan", "Juno", "Mars"]
+  // },
+  // {
+  //   id: 5,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question: "In Greek Mythology, who killed Achilles?",
+  //   correct_answer: "Paris",
+  //   incorrect_answers: ["Hector", "Helen", "Pericles"]
+  // },
+  // {
+  //   id: 6,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question: "A minotaur is half human half what?",
+  //   correct_answer: "Bull",
+  //   incorrect_answers: ["Cow", "Horse", "Eagle"]
+  // },
+  // {
+  //   id: 7,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+  //   correct_answer: "Set",
+  //   incorrect_answers: ["Horus", "Ra", "Anhur"]
+  // },
+  // {
+  //   id: 8,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question: "Which of the following is not one of the Greek Fates?",
+  //   correct_answer: "Narcissus",
+  //   incorrect_answers: ["Clotho", "Atropos", "Lachesis"]
+  // },
+  // {
+  //   id: 9,
+  //   type: "multiple",
+  //   difficulty: "medium",
+  //   question:
+  //     "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
+  //   correct_answer: "Spider",
+  //   incorrect_answers: ["Wild dog", "Monkey", "Crocodile"]
+  // },
+  // {
+  //   id: 10,
+  //   type: "boolean",
+  //   difficulty: "medium",
+  //   question: "Perseus defeated the Minotaur with his bare hands.",
+  //   correct_answer: "False",
+  //   incorrect_answers: ["True"]
+  // },
+  // {
+  //   id: 11,
+  //   type: "boolean",
+  //   difficulty: "medium",
+  //   question: "Cronus was the oldest of the Titans.",
+  //   correct_answer: "False",
+  //   incorrect_answers: ["True"]
+  // },
+  // {
+  //   id: 12,
+  //   type: "boolean",
+  //   difficulty: "Medium",
+  //   question: "Eros (Cupid) is the son of Aphrodite.",
+  //   correct_answer: "True",
+  //   incorrect_answers: ["False"]
+  // }
 ];
+console.log(questionsArray);
+
 // time varible to store count of time passed
 var time = 30;
 // boolean to determine when to start timer
@@ -168,19 +170,43 @@ function randomIndex(array) {
   var index = Math.floor(Math.random() * array.length);
   return index;
 }
-
-function getQuestion() {
-  // console.log("Index selected: ", questionIndex);
+function questionLogic() {
   if (firstRun === false) {
     firstRun = true;
+    getQuestion();
   } else {
     questionIndex++;
+    console.log(questionIndex);
     questionChoices = [];
+    if (questionsArray.findIndex(x => x.id === questionIndex) !== -1) {
+      getQuestion();
+    } else {
+      console.log("inside my terminate else statement");
+      $(".question").empty();
+      $(".answer").empty();
+      var gameResultsHeading = $("<h2>").text("game results");
+      $(".question").append(gameResultsHeading);
+      var correctPara = $("<p>").text(correct);
+      var incorrectPara = $("<p>").text(incorrect);
+      $(".answer").append(correctPara);
+      $(".answer").append(incorrectPara);
+      $("#reset-game").show();
+    }
   }
+}
+
+function getQuestion() {
+  // if (firstRun === false) {
+  //   firstRun = true;
+  // } else {
+  //   questionIndex++;
+  //   questionChoices = [];
+  // }
+
   displayQuestion = questionsArray[questionIndex].question;
   console.log("current question:", displayQuestion);
   askedQuestions.push(questionIndex);
-  console.log("Index of asked questions:",askedQuestions);
+  console.log("Index of asked questions:", askedQuestions);
 
   // print the question on the screen
   var newHeading = $("<h1>");
@@ -234,25 +260,34 @@ function closeModal() {
   $(".modal").modal("hide");
   $(".question").empty();
   $(".answer").empty();
-  getQuestion();
-  resetTimer();
+  questionLogic();
+  if (questionsArray.findIndex(x => x.id === questionIndex) !== -1) {
+    resetTimer();
+  } else {
+    stop();
+    $(".timer").attr({
+      style: "display:none"
+    });
+  }
+  
 }
+
+
 
 $(document).ready(function() {
   console.log("ready!");
 
   $("#start-game").on("click", function() {
-    getQuestion();
+    questionLogic();
     $("#time-label").attr("style", "inline-block");
     startTimer();
     $("#start-game").hide();
-    $("#next-question").show();
   });
 
   $("#next-question").on("click", function() {
     $(".question").empty();
     $(".answer").empty();
-    getQuestion();
+    questionLogic();
     resetTimer();
   });
 
@@ -267,16 +302,34 @@ $(document).ready(function() {
       questionResult(correctAnswerHeading, choiceValue);
       stop();
       correct++;
-      console.log(correct);
+      console.log("# of correct guesses", correct);
       setTimeout(closeModal, 2500);
     } else {
       console.log("wrong choice");
       questionResult(wrongAnswerHeading, choiceValue);
       stop();
       incorrect++;
-      console.log(incorrect);
+      console.log("# of incorrect guesses", incorrect);
       setTimeout(closeModal, 2500);
     }
+  });
+
+  $("#reset-game").on("click", function() {
+    $(".question").empty();
+    $(".answer").empty();
+    askedQuestions = [];
+    questionIndex = 0;
+    questionChoices = [];
+    firstRun = false;
+    correct = 0;
+    incorrect = 0;
+    
+    questionLogic();
+    $(".timer").attr({
+      style: "display:block"
+    });
+    resetTimer();
+    $("#reset-game").hide();
   });
 });
 

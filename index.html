@@ -20,16 +20,20 @@
           <h1>Mythology Trivia Game</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="timer">
-          <h2 id="time-label" style="display:none">Time Remaining: <span id="timer"></span></h2>
+      <div class="game" id="gameview" style="display:block">
+        <div class="row">
+          <div class="timer">
+            <h2 id="time-label" style="display:none">
+              Time Remaining: <span id="timer"></span>
+            </h2>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="question"></div>
-      </div>
-      <div class="row">
-        <form class="answer"></form>
+        <div class="row">
+          <div class="question"></div>
+        </div>
+        <div class="row">
+          <form class="answer"></form>
+        </div>
       </div>
       <div class="row">
         <div id="buttons">
@@ -43,14 +47,15 @@
           </button>
           <button
             class="btn btn-primary"
-            id="next-question"
+            id="reset-game"
             type="button"
             style="display:none"
           >
-            Next Question
+            Reset Game
           </button>
         </div>
       </div>
+
       <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
