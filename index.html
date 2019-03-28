@@ -17,27 +17,50 @@
     <div class="container">
       <div class="row">
         <div class="title">
-          <h1>Trivia Game</h1>
+          <h1>Mythology Trivia Game</h1>
         </div>
       </div>
       <div class="row">
         <div class="timer">
-          <h2 id="timer"></h2>
+          <h2 id="time-label" style="display:none">Time Remaining: <span id="timer"></span></h2>
         </div>
       </div>
       <div class="row">
-        <div class="question">
-        </div>
+        <div class="question"></div>
       </div>
       <div class="row">
-        <div class="answer">
-        </div>
+        <form class="answer"></form>
       </div>
       <div class="row">
-        <div>
-          <button type="button" class="btn btn-primary">
-            Reset
+        <div id="buttons">
+          <button
+            class="btn btn-primary"
+            id="start-game"
+            type="button"
+            style="display:inline-block"
+          >
+            Start Game
           </button>
+          <button
+            class="btn btn-primary"
+            id="next-question"
+            type="button"
+            style="display:none"
+          >
+            Next Question
+          </button>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+              <p class="text-center" id="text"></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
