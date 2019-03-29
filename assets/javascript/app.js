@@ -180,10 +180,10 @@ function questionLogic() {
       console.log("inside my terminate else statement");
       $(".question").empty();
       $(".answer").empty();
-      var gameResultsHeading = $("<h2>").text("game results");
+      var gameResultsHeading = $("<h2>").text("Game Results");
       $(".question").append(gameResultsHeading);
-      var correctPara = $("<p>").text(correct);
-      var incorrectPara = $("<p>").text(incorrect);
+      var correctPara = $("<p>").text("Correct Guesses: " + correct);
+      var incorrectPara = $("<p>").text("Incorrect Guesses: " + incorrect);
       $(".answer").append(correctPara);
       $(".answer").append(incorrectPara);
       $("#reset-game").show();
