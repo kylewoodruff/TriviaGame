@@ -131,7 +131,7 @@ var incorrect = 0;
 var correctAnswerHeading = "Congrats! you picked the right answer.";
 var wrongAnswerHeading = "Sorry, you picked the wrong answer.";
 var timesUpHeading = "Time's Up!";
-var timesUpText = "Sorry, you ran out of time!";
+
 
 function resetTimer() {
   time = 30;
@@ -160,16 +160,12 @@ function counter() {
   if (time === 0) {
     stop();
     console.log("time ran out!");
-    questionResult(timesUpHeading, timesUpText);
+    questionResult(timesUpHeading, questionsArray[questionIndex].correct_answer);
     setTimeout(closeModal, 2500);
     incorrect++;
   }
 }
 
-function randomIndex(array) {
-  var index = Math.floor(Math.random() * array.length);
-  return index;
-}
 function questionLogic() {
   if (firstRun === false) {
     firstRun = true;
@@ -272,13 +268,6 @@ $(document).ready(function() {
     $("#time-label").attr("style", "inline-block");
     startTimer();
     $("#start-game").hide();
-  });
-
-  $("#next-question").on("click", function() {
-    $(".question").empty();
-    $(".answer").empty();
-    questionLogic();
-    resetTimer();
   });
 
   $(document).on("click", ".form-check-input", function() {
