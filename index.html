@@ -13,54 +13,59 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class="bg-dark">
     <div class="container">
-      <div class="row">
-        <div class="title">
+      <div class="text-center">
+        <div class="title text-white mb-2">
           <h1>Mythology Trivia Game</h1>
         </div>
       </div>
-      <div class="game" id="gameview" style="display:block">
-        <div class="row">
-          <div class="timer">
+      <div class="card border-dark game" id="gameview" style="display:block">
+        <div id="game-card-header">
+          <div class="margin-auto timer">
             <h2 id="time-label" style="display:none">
               Time Remaining: <span id="timer"></span>
             </h2>
           </div>
         </div>
-        <div class="row">
+        <div class="card-title m-3" id="question-div">
           <div class="question"></div>
+          <div id="instruction-title">
+            <h1>Instructions</h1>
+          </div>
         </div>
-        <div class="row">
+        <div class="card-body">
+          <div id="instruction-text">
+            <p>Click on "Start Game" to being testing your knowledge of world Mythology.  Let your inner God or Goddess come forth and conqure!</p>
+          </div>
           <form class="answer"></form>
         </div>
-      </div>
-      <div class="row">
-        <div id="buttons">
-          <button
-            class="btn btn-primary"
-            id="start-game"
-            type="button"
-            style="display:inline-block"
-          >
-            Start Game
-          </button>
-          <button
-            class="btn btn-primary"
-            id="reset-game"
-            type="button"
-            style="display:none"
-          >
-            Reset Game
-          </button>
+        <div class="m-3">
+          <div id="buttons">
+            <button
+              class="btn btn-primary"
+              id="start-game"
+              type="button"
+              style="display:inline-block"
+            >
+              Start Game
+            </button>
+            <button
+              class="btn btn-primary"
+              id="reset-game"
+              type="button"
+              style="display:none"
+            >
+              Play Again
+            </button>
+          </div>
         </div>
       </div>
-
       <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center"></h5>
+            <div class="modal-header text-center" id="modal-header">
+              <h5 class="modal-title" id="modal-title"></h5>
             </div>
             <div class="modal-body">
               <p class="text-center" id="text"></p>

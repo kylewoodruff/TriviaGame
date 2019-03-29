@@ -113,8 +113,7 @@ var questionsArray = [
     incorrect_answers: ["False"]
   }
 ];
-console.log(questionsArray);
-
+// console.log(questionsArray);
 // time varible to store count of time passed
 var time = 30;
 // boolean to determine when to start timer
@@ -131,7 +130,6 @@ var incorrect = 0;
 var correctAnswerHeading = "Congrats! you picked the right answer.";
 var wrongAnswerHeading = "Sorry, you picked the wrong answer.";
 var timesUpHeading = "Time's Up!";
-
 
 function resetTimer() {
   time = 30;
@@ -160,7 +158,14 @@ function counter() {
   if (time === 0) {
     stop();
     console.log("time ran out!");
-    questionResult(timesUpHeading, questionsArray[questionIndex].correct_answer);
+    $("#modal-header")
+      .removeClass("bg-success")
+      .addClass("bg-danger");
+    $("#modal-title").addClass("text-white");
+    questionResult(
+      timesUpHeading,
+      questionsArray[questionIndex].correct_answer
+    );
     setTimeout(closeModal, 2500);
     incorrect++;
   }
@@ -180,7 +185,8 @@ function questionLogic() {
       console.log("inside my terminate else statement");
       $(".question").empty();
       $(".answer").empty();
-      var gameResultsHeading = $("<h2>").text("Game Results");
+      $("#game-card-header").removeClass("card-header");
+      var gameResultsHeading = $("<h1>").text("Game Results");
       $(".question").append(gameResultsHeading);
       var correctPara = $("<p>").text("Correct Guesses: " + correct);
       var incorrectPara = $("<p>").text("Incorrect Guesses: " + incorrect);
@@ -264,6 +270,13 @@ $(document).ready(function() {
   console.log("ready!");
 
   $("#start-game").on("click", function() {
+    $("#game-card-header").addClass("card-header text-center bg-primary text-white");
+    $("#instruction-title").attr({
+      style: "display:none"
+    });
+    $("#instruction-text").attr({
+      style: "display:none"
+    });
     questionLogic();
     $("#time-label").attr("style", "inline-block");
     startTimer();
@@ -278,6 +291,10 @@ $(document).ready(function() {
     // console.log(choiceValue);
     if (questionsArray[questionIndex].correct_answer === choiceValue) {
       console.log("right choice");
+      $("#modal-header")
+        .removeClass("bg-danger")
+        .addClass("bg-success");
+      $("#modal-title").addClass("text-white");
       questionResult(correctAnswerHeading, choiceValue);
       stop();
       correct++;
@@ -285,7 +302,14 @@ $(document).ready(function() {
       setTimeout(closeModal, 2500);
     } else {
       console.log("wrong choice");
-      questionResult(wrongAnswerHeading, questionsArray[questionIndex].correct_answer);
+      $("#modal-header")
+        .removeClass("bg-success")
+        .addClass("bg-danger");
+      $("#modal-title").addClass("text-white");
+      questionResult(
+        wrongAnswerHeading,
+        questionsArray[questionIndex].correct_answer
+      );
       stop();
       incorrect++;
       console.log("# of incorrect guesses", incorrect);
@@ -303,6 +327,7 @@ $(document).ready(function() {
     correct = 0;
     incorrect = 0;
     questionLogic();
+    $("#game-card-header").addClass("card-header");
     $(".timer").attr({
       style: "display:block"
     });
